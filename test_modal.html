@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Console</title>
+</head>
+<body>
+    <h1>Test du bouton</h1>
+    <button onclick="alert('Test'); openCategoryModal();">Test Bouton</button>
+    
+    <div id="categoryModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5);">
+        <div style="background: white; margin: 100px auto; padding: 20px; max-width: 500px;">
+            <h2>Modal Test</h2>
+            <button onclick="document.getElementById('categoryModal').classList.remove('active')">Fermer</button>
+        </div>
+    </div>
+    
+    <script>
+        function openCategoryModal() {
+            alert('Fonction appelée!');
+            document.getElementById('categoryModal').classList.add('active');
+            document.getElementById('categoryModal').style.display = 'flex';
+        }
+    </script>
+    
+    <h2>Instructions:</h2>
+    <p>1. Cliquez sur le bouton "Test Bouton"</p>
+    <p>2. Vous devriez voir une alerte "Test" puis "Fonction appelée!"</p>
+    <p>3. Si vous ne voyez pas les alertes, ouvrez la console (F12) et vérifiez les erreurs</p>
+    <p>4. Ensuite, testez sur materiel.php avec F12 ouvert pour voir les erreurs</p>
+</body>
+</html>
